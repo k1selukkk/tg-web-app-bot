@@ -8,6 +8,16 @@ const webAppUrl = 'https://ya.ru/'
 //Действия бота в самой телеге
 const bot = new TelegramBot(token, {polling: true});
 
+// команда возвращает список избранных фильмов и сериалов(если будем такое делать)
+bot.command('favorites', (ctx) => {
+    ctx.reply_markup(`
+    Фильмы и сериалы, которые вы добавили в избранное:
+    1.
+    2.
+    3.
+    `)
+})
+
 
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
