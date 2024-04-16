@@ -18,6 +18,23 @@ bot.command('favorites', (ctx) => {
     `)
 })
 
+// команда для показа топ 10 фильмов за неделю/месяц/год хз
+bot.command('top10', (ctx) => {
+    ctx.reply_markup(`
+    Топ фильмов за такой-то месяц:
+    1.
+    2.
+    3.
+    4.
+    5.
+    6.
+    7.
+    8.
+    9.
+    10.
+    `)
+})
+
 
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
